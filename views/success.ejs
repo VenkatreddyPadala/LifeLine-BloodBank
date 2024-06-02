@@ -188,94 +188,95 @@
         }
 
         @media (max-width: 1024px) {
-            nav {
-                padding: 0 2rem;
-            }
+    nav {
+        padding: 0 2rem;
+    }
 
-            .user-info, .table-container {
-                padding: 30px;
-                height: auto;
-            }
+    .user-info, .table-container {
+        padding: 30px;
+        height: auto;
+    }
 
-            nav .left {
-                font-size: 1.3em;
-            }
+    nav .left {
+        font-size: 1.3em;
+    }
 
-            nav .right a {
-                padding: 0.5em 0.8em;
-            }
+    nav .right a {
+        padding: 0.5em 0.8em;
+    }
 
-            th, td {
-                padding: 12px 15px;
-            }
-        }
+    th, td {
+        padding: 12px 15px;
+    }
+}
 
-        @media (max-width: 800px) {
-            nav {
-                flex-direction: column;
-                align-items: flex-start;
-                padding: 1rem;
-            }
+@media (max-width: 800px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+    }
 
-            nav .left {
-                margin-bottom: 1rem;
-            }
+    nav .left {
+        margin-bottom: 1rem;
+    }
 
-            nav .right ul {
-                flex-direction: column;
-                align-items: flex-start;
-            }
+    nav .right ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-            nav .right li {
-                margin-left: 0;
-                margin-bottom: 0.5rem;
-            }
+    nav .right li {
+        margin-left: 0;
+        margin-bottom: 0.5rem;
+    }
 
-            main {
-                flex-direction: column;
-                align-items: center;
-            }
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
 
-            .user-info, .table-container {
-                width: 75%;
-                padding: 20px;
-            }
+    .user-info, .table-container {
+        width: 75%;
+        padding: 20px;
+    }
 
-            th, td {
-                padding: 10px 12px;
-            }
-        }
+    th, td {
+        padding: 10px 12px;
+    }
+}
 
-        @media (max-width: 600px) {
-            nav {
-                padding: 0.5rem;
-            }
+@media (max-width: 600px) {
+    nav {
+        padding: 0.5rem;
+    }
 
-            .user-info, .table-container {
-                width: 100%;
-                padding: 15px;
-            }
+    .user-info{
+        width: 100%;
+        padding: 15px;
+        position: static;
+    }
+    .table-container {
+        width: 100%;
+        padding: 16px;
+    }
 
-            th, td {
-                padding: 4px 5px;
-            }
+    th, td {
+        padding: 2px 2px;
+    }
 
-            table {
-                font-size: 0.9em;
-            }
+    table {
+        font-size: 0.9em;
+    }
 
-            .input-box input {
-                width: 80%;
-            }
+    .input-box input {
+        width: 80%;
+    }
 
-            button {
-                width: 80%;
-            }
-        }
-
-        .hidden {
-            display: none;
-        }
+    button {
+        width: 80%;
+    }
+}
     </style>
 </head>
 <body>
@@ -342,7 +343,7 @@
                 <div class="input-box">
                     <input type="text" name="Location" placeholder="Location" required>
                 </div>
-                <button type="submit">Submit</button>
+                <input type="submit" value="Submit" style="background-color: #4A0000; color: white;width: 70px; height: 30px; border-radius: 5px;">
             </form>
             <br>
             <% if (!showFindSection) { %>

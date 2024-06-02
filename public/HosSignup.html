@@ -118,13 +118,29 @@
         }
 
         @media (max-width: 800px) {
+            .left-half {
+                display: none;
+            }
+
+            .right-half {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
             main {
                 margin-top: 80px;
                 padding: 20px;
             }
 
+            main img {
+                width: 120px;
+                padding: 0 150px;
+            }
+
             .input-box input {
                 padding: 15px;
+                width: 85%;
             }
 
             button[type="submit"] {
@@ -148,8 +164,14 @@
                 padding: 15px;
             }
 
+            main img {
+                width: 100px;
+                padding: 0 120px;
+            }
+
             .input-box input {
                 padding: 12px;
+                width: 80%;
             }
 
             button[type="submit"] {
@@ -180,6 +202,10 @@
                     <div class="input-box">
                         <label for="HospName">Hospital Name</label>
                         <input type="text" id="HospName" name="HospName" placeholder="Enter your Hospital Name" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="DocName">Doctor Name</label>
+                        <input type="text" id="DocName" name="DocName" placeholder="Enter the Name" required>
                     </div>
                 </div>
                 <div class="input-box">

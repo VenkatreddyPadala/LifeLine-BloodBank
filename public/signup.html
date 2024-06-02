@@ -15,7 +15,7 @@
         }
 
         .left-half {
-            background-image: url(retrosupply-jLwVAUtLOAQ-unsplash.jpg);
+            background-image: url('retrosupply-jLwVAUtLOAQ-unsplash.jpg');
             background-repeat: no-repeat;
             background-size: cover;
             flex: 1;
@@ -23,11 +23,11 @@
             justify-content: center;
             align-items: center;
         }
-        .left-half img{
+
+        .left-half img {
             width: 130%;
             height: 100%;
         }
-
 
         .right-half {
             background-color: #86020F;
@@ -41,7 +41,7 @@
         main {
             width: 100%;
             max-width: 600px;
-            background:  #86020F;
+            background: #86020F;
             color: white;
             padding: 30px;
             border-radius: 10px;
@@ -49,8 +49,9 @@
             gap: 10px;
             border: none;
         }
-        main img{
-            width:150px; 
+
+        main img {
+            width: 150px;
             padding: 0 220px;
         }
 
@@ -89,7 +90,7 @@
         button[type="submit"] {
             width: 95%;
             padding: 0.75em;
-            background-color:#4A0000;
+            background-color: #4A0000;
             color: white;
             border: none;
             border-radius: 5px;
@@ -120,13 +121,29 @@
         }
 
         @media (max-width: 800px) {
+            .left-half {
+                display: none;
+            }
+
+            .right-half {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
             main {
                 margin-top: 80px;
                 padding: 20px;
             }
 
+            main img {
+                width: 120px;
+                padding: 0 150px;
+            }
+
             .input-box input {
                 padding: 15px;
+                width: 85%;
             }
 
             button[type="submit"] {
@@ -150,8 +167,14 @@
                 padding: 15px;
             }
 
+            main img {
+                width: 100px;
+                padding: 0 120px;
+            }
+
             .input-box input {
                 padding: 12px;
+                width: 80%;
             }
 
             button[type="submit"] {
@@ -192,7 +215,7 @@
 
                 <div class="input-box">                 
                     <label for="number">Phone number</label>
-                    <input type="tel" id="number" name="number" placeholder="Mobile Number" pattern="\d{10}" required>
+                    <input type="tel" id="number"  name="number" placeholder="Mobile Number" pattern="\d{10}" required>
                 </div>
 
                 <div id="dual-box">
@@ -225,14 +248,13 @@
         var confirmPassword = document.getElementById('confirmPassword').value;
         var phoneNumber = document.getElementById('number').value;
         var phonePattern = /^\d{10}$/;
-
-        if (password !== confirmPassword) {
-            document.getElementById('passwordError').textContent = 'Passwords do not match.';
-            event.preventDefault();
-        }
-
+        
         if (!phonePattern.test(phoneNumber)) {
             document.getElementById('passwordError').textContent = 'Phone number must be 10 digits.';
+            event.preventDefault();
+        }
+        if (password !== confirmPassword) {
+            document.getElementById('passwordError').textContent = 'Passwords do not match.';
             event.preventDefault();
         }
     });

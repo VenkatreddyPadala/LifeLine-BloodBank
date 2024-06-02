@@ -47,6 +47,7 @@ const donorSchema = new mongoose.Schema({
 
 const hospSchema = new mongoose.Schema({
     HospName: { type: String, required: true },
+    DocName:{type:String, required: true},
     hospID: { type: Number, required: true },
     password: { type: String, required: true }
 });
@@ -278,7 +279,7 @@ app.get("/hospitals/signup", (req, res) => {
 });
 
 app.post("/hospitals/signup", async (req, res) => {
-    const { HospName, hospID, password } = req.body;
+    const { HospName,DocName ,hospID, password } = req.body;
 
     try {
         const existingHosp = await HospUser.findOne({ hospID: hospID });
@@ -289,7 +290,7 @@ app.post("/hospitals/signup", async (req, res) => {
             const hashedPassword = await bcrypt.hash(password, 10);
 
             const newHosp = new HospUser({
-                HospName, hospID, password: hashedPassword
+                HospName,DocName, hospID, password: hashedPassword
             });
 
             await newHosp.save();

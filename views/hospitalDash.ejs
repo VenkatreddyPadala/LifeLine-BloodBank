@@ -78,44 +78,42 @@
             gap: 10px;
         }
 
-        @media (max-width: 600px) {
-            table, th, td {
-                display: block;
-                width: 100%;
-            }
+    
+        @media (max-width: 800px) {
+    table th, table td {
+        padding: 12px;
+    }
 
-            table th, table td {
-                box-sizing: border-box;
-                width: 100%;
-                display: block;
-            }
+    button {
+        padding: 8px 16px;
+    }
+}
 
-            table th {
-                background-color: #86020F;
-                color: #fff;
-                font-weight: bold;
-                padding: 10px;
-            }
+/* For screens up to 600px */
+@media (max-width: 600px) {
+    table, th, td {
+        /* display: block; */
+        width: 100%;
+    }
 
-            table td {
-                background-color: #fff;
-                border: none;
-                padding: 10px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
+    table th {
+        padding: 10px;
+    }
 
-            .actions {
-                flex-direction: column;
-                gap: 5px;
-            }
+    table td {
+        padding: 8px;
+    }
 
-            button {
-                width: 100%;
-                padding: 15px;
-            }
-        }
+    .actions {
+        /* flex-direction: column; */
+        gap: 5px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+    }
+}
     </style>
 </head>
 <body>

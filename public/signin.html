@@ -21,21 +21,22 @@
             justify-content: center;
             align-items: center;
         }
-        .left-half img{
+
+        .left-half img {
             width: 135%;
             height: 100%;
-            mix-blend-mode:hard-light;
-
+            mix-blend-mode: hard-light;
         }
 
         .right-half {
-            background-color:#86020F;
+            background-color: #86020F;
             flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             z-index: 1;
         }
+
         main {
             width: 100%;
             max-width: 500px;
@@ -43,9 +44,9 @@
             color: white;
             padding: 30px;
             border: none;
-            /* box-shadow: 0 0 10px rgba(0,0,0,0.1); */
         }
-        main img{
+
+        main img {
             width: 150px;
             padding: 0 220px;
         }
@@ -75,19 +76,19 @@
             border: 1px solid #ccc;
             border-radius: 15px;
         }
-        #loginForm{
+
+        #loginForm {
             display: flex;
-            justify-content:space-between;
-            align-items:center;
+            justify-content: space-between;
+            align-items: center;
             flex-direction: column;
             gap: 8px;
         }
 
         button[type="submit"],
         button[type="button"] {
-        
             padding: 0.75em;
-            background-color:#4A0000;
+            background-color: #4A0000;
             color: white;
             border: none;
             border-radius: 5px;
@@ -116,16 +117,40 @@
                 margin-top: 100px;
                 padding: 25px;
             }
+
+            main img {
+                padding: 0 180px;
+            }
+
+            .input-box input {
+                width: 90%;
+            }
         }
 
         @media (max-width: 800px) {
+            .left-half {
+                display: none;
+            }
+
+            .right-half {
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+
             main {
                 margin-top: 80px;
                 padding: 20px;
             }
 
+            main img {
+                width: 120px;
+                padding: 0 150px;
+            }
+
             .input-box input {
                 padding: 15px;
+                width: 85%;
             }
 
             button[type="submit"],
@@ -141,8 +166,14 @@
                 padding: 15px;
             }
 
+            main img {
+                width: 100px;
+                padding: 0 120px;
+            }
+
             .input-box input {
                 padding: 12px;
+                width: 80%;
             }
 
             button[type="submit"],
@@ -179,6 +210,7 @@
                     <button id="loginBtn" type="submit">Submit</button>
                 </div>
                 <p><a href="signup.html" style="color: white;">No Account? Create Account Here</a></p>
+                <p><a href="HosSignin.html" style="color: white;">Hospital Portal</a></p>
             </form>
             <!-- <p><a href="signup.html">No Account? Create Account Here</a></p> -->
         </main>

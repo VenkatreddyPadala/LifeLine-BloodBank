@@ -112,45 +112,69 @@
         }
 
         @media (max-width: 1024px) {
-            main {
-                margin-top: 100px;
-                padding: 25px;
-            }
-        }
+    main {
+        margin-top: 100px;
+        padding: 25px;
+    }
+}
 
-        @media (max-width: 800px) {
-            main {
-                margin-top: 80px;
-                padding: 20px;
-            }
+@media (max-width: 800px) {
+    main {
+        margin-top: 80px;
+        padding: 20px;
+    }
 
-            .input-box input {
-                padding: 15px;
-            }
+    .input-box input {
+        padding: 15px;
+    }
 
-            button[type="submit"],
-            button[type="button"] {
-                padding: 0.5em;
-                font-size: 0.9em;
-            }
-        }
+    button[type="submit"],
+    button[type="button"] {
+        padding: 0.5em;
+        font-size: 0.9em;
+    }
 
-        @media (max-width: 600px) {
-            main {
-                margin-top: 50px;
-                padding: 15px;
-            }
+    .left-half img {
+        display: none; /* Hide the image */
+    }
+}
 
-            .input-box input {
-                padding: 12px;
-            }
+@media (max-width: 600px) {
+    main {
+        margin-top: 50px;
+        padding: 15px;
+    }
 
-            button[type="submit"],
-            button[type="button"] {
-                padding: 0.5em;
-                font-size: 0.8em;
-            }
-        }
+    .input-box input {
+        padding: 12px;
+    }
+
+    button[type="submit"],
+    button[type="button"] {
+        padding: 0.5em;
+        font-size: 0.8em;
+    }
+
+    .left-half {
+        display: none;
+    }
+
+    .right-half {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    main img {
+        width: 100px;
+        padding: 0 120px;
+    }
+
+    #loginForm {
+        gap: 12px;
+    }
+}
     </style>
 
 </head>
@@ -176,8 +200,9 @@
                 <div class="input-box">
                     <button id="loginBtn" type="submit">Submit</button>
                 </div>
+                <p><a href="HosSignup.html" style="color: white;">No Account? Create Account Here</a></p>
+                <p><a href="signin.html" style="color: white;">User Portal</a></p>
             </form>
-            <p><a href="HosSignup.html" style="color: white;">No Account? Create Account Here</a></p>
         </main>
     </div>
 </body>
