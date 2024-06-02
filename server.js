@@ -245,9 +245,6 @@ app.get("/hospital", (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'HosSignin.html'));
 });
 
-app.get("/hospitals/signin", (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'HosSignin.html'));
-});
 
 app.post("/hospitals/signin", async (req, res) => {
   const { hospID, password } = req.body;
@@ -294,7 +291,7 @@ app.post("/hospitals/signup", async (req, res) => {
       });
 
       await newHospital.save();
-      res.redirect('/hospitals/signin');
+      res.redirect('/hospital');
     }
   } catch (err) {
     console.error("Error during hospital signup:", err.message);
