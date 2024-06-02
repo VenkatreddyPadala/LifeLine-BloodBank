@@ -322,7 +322,10 @@ app.get("/hospitals/dashboard", authenticateHospital, async (req, res) => {
     const approvedRequests = await Pending.find({ HosptialID: hospital.hospID, Validate: 1 });
     const rejectedRequests = await Pending.find({ HosptialID: hospital.hospID, Validate: -1 });
 
-    res.render('hospitaldash', { pendingRequests, approvedRequests, rejectedRequests });
+    res.render('hospitalDash',
+     { pendingRequests, approvedRequests, rejectedRequests 
+        
+     });
   } catch (err) {
     console.error("Error fetching hospital dashboard data:", err.message);
     res.status(500).send("An error occurred while fetching data.");
