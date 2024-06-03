@@ -121,6 +121,6 @@ LifeLine is a web application designed to facilitate blood donation and manage b
          <li><a href="https://github.com/pranayreddyambati">Pranay Reddy Ambati</a></li>
          <li><a href="https://github.com/ordr-github">Deepak Reddy Obulareddy</a></li>
          <li><a href="https://github.com/revanth0514">Revanth Chowdary Garapati</a></li>
-         <li><a href="#">Keerthi Manoja</a></li>
+         <li><a href="https://github.com/print-keer">Keerthi Manoja</a></li>
          <li><a href="#">Sravanthi Vani</a></li>
       </ul>
