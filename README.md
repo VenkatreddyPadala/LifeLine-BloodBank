@@ -82,7 +82,6 @@ LifeLine is a web application designed to facilitate blood donation and manage b
 ├── views
 │   ├── success.ejs
 │   ├── hospitalDash.ejs
-│   └── ...
 │
 ├── .env
 ├── server.js
